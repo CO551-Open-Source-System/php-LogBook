@@ -5,9 +5,9 @@
   $topmodules[30] = "OOAD";
   $topmodules[40] = "Software Engineering";
 
-  for ($count = 0; $count < 30; $count++);
+  for ($index = 0; $index < 10; $index++);
   {
-    echo "Index is $count and value is $topModules[$count] <br/>";
+    echo "Index is $index and value is $topmodules[$index] <br/>";
   }
 ?>
 
