@@ -7,8 +7,8 @@
   $topModules[5] = "Networking";
   $topModules[6] = "Open Source System";   
 
-for ($count = 0; $count < 5; $count++);
+for ($count = 0; $count < 2; $count++);
   {
-    echo "$count module is $topModules[$count] <br/>";
+    echo "$count module is .$topModules[$count] <br/>";
   }	
 ?>
