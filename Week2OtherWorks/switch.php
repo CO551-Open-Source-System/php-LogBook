@@ -5,8 +5,8 @@
     </head>
     <body>
         <?php
-           $grade=$_POST['grade'];
-           //$grade=$_POST['switch'];          
+           $grade=$_POST['grade1'];
+
             switch ($grade) {
                 case $grade >=65; echo 'Grade: Distinction';break;
                 case $grade >=60; echo 'Grade: Merit';break;
