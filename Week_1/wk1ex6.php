@@ -2,10 +2,13 @@
 <body>
 <?php
 	$firstname = "Richard";
-   $space = " ";
+   // $space = " ";
 	$lastname = "Mather";
-	$name = $firstname .$space. $lastname;
-	echo $name;
+	//$name = $firstname .$space. $lastname;
+	$fullname =$firstname." ".$lastname;
+	echo "$fullname<br/>";
+	echo "$firstname $lastname";
+	//echo $name;
 ?>
 </body>
 </html>
