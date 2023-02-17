@@ -1,15 +1,19 @@
 <?php
-$mymarks["year 1"] = 55;
-$mymarks["year 2"] = 65;
-$mymarks["year 3"] = 75;
+$mymarks["CO552 Programming Concepts"] = 55;
+$mymarks["CO454 Web Development"] = 65;
+$mymarks["CO456 Computer Architectures"] = 75;
+$mymarks["CO458 XML"] = 65;
+$mymarks["CO451 Networking"] = 75;
+$mymarks["CO455 User Experience(UX)"] = 75;
 
 $total = 0;
-
-$average = $total /  3;
 foreach ($mymarks as $index => $value) {
     $total = $total + $mymarks[$index];
-    echo "Myaverage mark. $average";
-}
+    $average = $total /  6; 
+    echo "$index => $mymarks[$index] <br/>";
+  }
+ echo "<br/> The Total marks   =  $total";
+ echo "<br/> The Average marks =  $average";
+?>
 
-//echo ($total . $average);
-?>   
+
