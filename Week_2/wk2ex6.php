@@ -1,7 +1,11 @@
 <?php
   $marks[0] = 65;
+  $marks[1] = 55;
+  $marks[2] = 76;
   $marks[3] = 55;
-  $marks[] = 76;
+  $marks[4] = 76;
+  $marks[5] = 55;
+  
   
   
   echo " Index 0 = $marks[0] <br/>";
