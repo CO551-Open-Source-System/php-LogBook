@@ -6,8 +6,20 @@ $topModules[3] = "OOAD";
 $topModules[4] = "Software Engineering";
 $topModules[5] = "Networking";
 $topModules[6] = "Open Source System";   
-
+?>
+<head>
+<title>Data in table</title>
+</head>
+<body>
+<table border=1 align="center">
+<tr><th>Index</th><th>Subject</th></tr> 
+<?php
 for ( $count=0; $count < 6; $count++) {
-    echo "$count module is .$topModules[$count] <br/>";
+    echo "<tr>
+        <td>$count module is</td>
+        <td>.$topModules[$count]</td></tr>";
     }
 ?>
+</table>
+</body>
+</html>
