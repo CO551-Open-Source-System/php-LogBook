@@ -6,7 +6,7 @@
         <body>
             <form method="post" action="grade.php">
                 Please enter your grade:
-                <p><input type="text" name="value"></p>
+                <p><input type="text" name="grade"></p>
                 <input type="submit" value="submit">                
             </form>            
         </body>
