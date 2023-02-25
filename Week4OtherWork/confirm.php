@@ -1,3 +1,3 @@
-<?
-echo "Your account is $_POST[txtaccount]";
+<?php
+echo "Your account is". $_POST['txtaccount'];
 ?>
