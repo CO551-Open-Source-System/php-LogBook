@@ -2,7 +2,8 @@
   <head><title>Select colour page</title></head>
     <body>
       <form action="confirmationhidden.php"  method="post">
-	Select the colour for the <input type="hidden" name="selqty" value="<?php echo $_POST['selqty'] ?>"/> widgets you are ordering
+	Select the colour for the <input type="hidden" name="hdselqty"
+   value="<?= $_POST['selqty'] ?>"/> widgets you are ordering
    	<select name="selcolour">
    	  <option>white</option>
 	  <option>red</option>
