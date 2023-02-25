@@ -1,10 +1,10 @@
 <html>
   <head><title>Select colour page</title></head>
     <body>
-      <?php $cookieName ='selqty';
+      <?php $cookieName ='qtyNumber';
       setcookie($cookieName, $_POST['selqty']);
       ?>
-      <form action="confirmation.php"  method="post">
+      <form action="confirmationcookies.php"  method="post">
        	Select the colour for the <?php echo $_POST['selqty'] ?> widgets you are ordering
    	<select name="selcolour">
    	  <option>white</option>
