@@ -1,27 +1,11 @@
 <?php	
 
-	// Connect to server and select database
-    $servername = "localhost";
-    $username = "sudath";
-    $password = "test123";
-    $dbname = "db1_ex5";
-
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    
+    // Database connection file
+    include 'Dbconnection.php';	  
 
 	// Prepare query and execute it
-    $id =mysqli_real_escape_string($conn, $_GET['id']);
-    $sql = "SELECT * from test where name = '$id'";
-    $result = mysqli_query($conn, $sql);
-
-    // Check for errors and handle them gracefully
-    if (!$result) {
-        die("Error: " . mysqli_error($conn));
-    }
+    $sql = "SELECT * FROM test WHERE ID = '$_GET[id]'";
+    $result = $mysqli->query($sql);
 
     // Display the form
     $row = mysqli_fetch_assoc($result);
@@ -31,7 +15,7 @@
 <form action=" " method="post">
 
 	Name :
-	<input type=text name=txtname value="<?php echo $row['name'] ?>" readonly />
+	<input type=text name=txtname value="<?php echo $row['name'] ?>"/>
 	</br>
 	Phone number :
 	<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" />
