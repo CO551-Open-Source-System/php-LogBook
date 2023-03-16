@@ -1,40 +1,39 @@
 <?php
+    // Database connection file
+    include 'Dbconnection.php';
 
-	// Connect to server and select database
-    $servername = "localhost";
-    $username = "sudath";
-    $password = "test123";
-    $dbname = "db1_ex5";
+    //Insert the value to database
+    $sql = "INSERT INTO test (name,email,phone_number)";
+    $sql = $sql . " values ('$_POST[txtName]','$_POST[txtEmail]','$_POST[txtPhoneNumber]')";
+   
+//    // Connect to server and select database
+//     $mysqli = new mysqli("localhost","sudath","test123","db1_ex5");
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+//     // Check connection
+//     if ($conn->connect_error) {
+//         die("Connection failed: " . $conn->connect_error);
+//     }
 
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-	// Define the SQL statement for inserting data into the 'test' table
-    $sql = "INSERT INTO test (name, email, phone_number) 
-    VALUES ('".$_POST['txtName']."','".$_POST['txtEmail']."','".$_POST['txtPhoneNumber']."')";
-	
-	// Execute the SQL statement to insert the data into the 'test' table
-    if (mysqli_query($conn, $sql)) {
-        echo " New record created successfully <br/><br/>";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+   
+	//Execute the SQL statement to insert the data into the 'test' table
+    if ($mysqli->query($sql) === TRUE) {
+        echo "New record created successfully <br/><br/>";
+      } else {
+        echo "Error: " . $sql . "<br>" . $mysqli -> connect_error;
+      }
 	
 	
 	// Define the SQL statement for selecting all data from the 'test' table 
-
 	$sql = "SELECT * from test";
-	$result = mysqli_query($conn, $sql);
-	// Execute sql statement
+    // $result = mysqli_query($conn, $sql);
 	
+    // Execute sql statement
+	$result = $mysqli->query($sql);
 	while ($row = mysqli_fetch_assoc($result))
 	{
 		echo "$row[name]  $row[email]  $row[phone_number] <br/>";
 	}
 	
     // Close the database connection
-    mysqli_close($conn);
+    // mysqli_close($conn);
 ?>
