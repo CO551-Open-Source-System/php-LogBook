@@ -1,32 +1,47 @@
-<?php
-// Connect to server and select database
-$servername = "localhost";
-$username = "sudath";
-$password = "test123";
-$dbname = "db1_ex5";
+<!-- Sudath Nawagamuwage
+	 CO551-Open Source System
+	 LoogBook 6-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css"/>
+		<title>PHP log book Sudath Nawagamuwage</title>	
+	</head>
+	<body>
+		<div class="page-container">
+			<header>
+				<h1>My PHP Log book page</h1>
+			</header>
+			<div class="content-wrap">
+				<div class="container">
+					<?php
+					// Database connection file
+					include 'Dbconnection.php';
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+					// Selecting data from the test table
+					$sql = "SELECT * FROM test";
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+					// Execute sql statement
+					$result = $mysqli->query($sql);
+					?>
+					<!-- Print the result of query  -->
+					<?php
+					if (isset($_GET["msg"])){
+						echo "<p>{$_GET["msg"]}</p>";
+					}
 
-// Execute query
-$sql = "SELECT * from test";
-$result = mysqli_query($conn, $sql);
-
-// Check for errors and handle them gracefully
-if (!$result) {
-    die("Error: " . mysqli_error($conn));
-}
-
-// Display the records and a "delete" link for each record
-while ($row = mysqli_fetch_assoc($result)) {
-    echo "<a href=\"wk6ex2action.php?id=$row[name]\">$row[name]</a> ";
-    echo "<a href=\"wk6ex2delete.php?id=$row[name]\">delete</a><br>";
-}
-
-// Release the result set and close the database connection
-mysqli_free_result($result);
-mysqli_close($conn);
-?>
+					while ($row = mysqli_fetch_assoc($result)){
+						echo "<a href=\"wk6ex2action.php?id=$row[ID]\">$row[name] $row[ID]</a>";
+					}
+					?>
+				</div>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<p>&copy; 2023 My Website. All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
