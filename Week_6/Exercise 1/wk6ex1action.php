@@ -30,8 +30,7 @@
                         }	
                         // Define the SQL statement for selecting all data from the 'test' table 
                         $sql = "SELECT * from test";
-                        // $result = mysqli_query($conn, $sql);
-                        
+                                              
                         // Execute sql statement
                         $result = $mysqli->query($sql);
                         while ($row = mysqli_fetch_assoc($result))
