@@ -1,30 +1,20 @@
 <?php	
 
-	// Connect to server and select database
-    $servername = "localhost";
-    $username = "sudath";
-    $password = "test123";
-    $dbname = "db1_ex5";
+    // Database connection file
+    include 'Dbconnection.php';
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-	$sql = "SELECT * from test";
-    $result = mysqli_query($conn, $sql);
-
-	// Execute sql statement
-	
+	//Selecting data from the test teble
+	$sql = "SELECT * FROM test";
+    // Execute sql statement
+	$result = $mysqli->query($sql);
 ?>
 <html>
 <body>
-
+<!-- Print the result of queary  -->
 <?php
 while ($row = mysqli_fetch_assoc($result))
 {
-      echo "<a href=\"wk6ex2action.php?id=$row[name]\">$row[name]</a></br>";  	
+      echo "<a href=\"wk6ex2action.php?id=$row[ID]\">$row[name] $row[ID]</a></br>";  	
 }
 ?>
 </body>
