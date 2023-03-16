@@ -1,62 +1,54 @@
+<!-- Sudath Nawagamuwage
+	 CO551-Open Source System
+	 LoogBook 6-->
+	 <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css"/>
+		<title>PHP log book Sudath Nawagamuwage</title>	
+	</head>
+	<body>
+		<div class="page-container">
+			<header>
+				<h1>My PHP Log book page</h1>
+			</header>
+			<div class="content-wrap">
+				<div class="container">	
 <?php	
 
-	// Connect to server and select database
-    $servername = "localhost";
-    $username = "sudath";
-    $password = "test123";
-    $dbname = "db1_ex5";
+    // Database connection file
+    include 'Dbconnection.php';	  
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+	// Prepare query and execute it
+    $sql = "SELECT * FROM test WHERE ID = '$_GET[id]'";
+    $result = $mysqli->query($sql);
 
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    // Prepare query and execute it
-    $id =mysqli_real_escape_string($conn, $_GET['id']);
-    $sql = "SELECT * from test where name = '$id'";
-    $result = mysqli_query($conn, $sql);
-
-    // Check for errors and handle them gracefully
-    if (!$result) {
-        die("Error: " . mysqli_error($conn));
-    }
-
-    //Display the form
+    // Display the form
     $row = mysqli_fetch_assoc($result);
-
-	if(isset($_POST['btnsubmit'])) {
-        
-        $telno = mysqli_real_escape_string($conn, $_POST['txttelno']);
-        $email = mysqli_real_escape_string($conn, $_POST['txtemail']);
-        
-        $sql = "UPDATE test SET phone_number='$telno', email='$email' WHERE name='$id'";
-        $result = mysqli_query($conn, $sql);
-        
-        if($result) {
-            echo "Record updated successfully";
-        } else {
-            echo "Error updating record: " . mysqli_error($conn);
-        }
-    }   
-    // // Display the form
-    // $row = mysqli_fetch_assoc($result);  
-    // // // Close the database connection
-    // // mysqli_close($conn);
-   
     ?>
 <html>
 <body>
-<form action=" " method="post">
+<form action="wk6ex2save.php?id=<?php echo $_GET['id'] ?>" method="post">
 
 	Name :
-	<input type=text name=txtname value="<?php echo $row['name'] ?>" readonly />
-	</br>
+	<input type=text name=txtname value="<?php echo $row['name'] ?>"/>
+	</br></br>
 	Phone number :
 	<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" />
-	</br>
+	</br></br>
 	Email :
 	<input type=text name=txtemail value="<?php echo $row['email'] ?>" />
-	</br>
+	</br></br>
 	<input type=submit name=btnsubmit value="save"/>
 </form>
-</body>
+</div>
+			</div>
+			<!-- footer -->
+			<footer class="footer">
+				<p>&copy; 2023 My Website. All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
