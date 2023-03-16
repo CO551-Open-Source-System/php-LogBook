@@ -26,9 +26,9 @@
 						$row = mysqli_fetch_assoc($result);
     				?>
 						<form action=" " method="post">
-							Name :<input type=text name=txtname value="<?php echo $row['name'] ?>"/></br>
-							Phone number :<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" /></br>
-							Email :<input type=text name=txtemail value="<?php echo $row['email'] ?>" /></br>
+							Name :<input type=text name=txtname value="<?php echo $row['name'] ?>"/></br></br>
+							Phone number :<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" /></br></br>
+							Email :<input type=text name=txtemail value="<?php echo $row['email'] ?>" /></br></br>
 							<input type=submit name=btnsubmit value="save"/>
 						</form>
 				</div>
