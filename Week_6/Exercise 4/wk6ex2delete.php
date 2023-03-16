@@ -1,6 +1,4 @@
-<!-- Sudath Nawagamuwage
-	 CO551-Open Source System
-	 LoogBook 6-->
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
 <?php	
     // Database connection file
     include 'Dbconnection.php';	  
