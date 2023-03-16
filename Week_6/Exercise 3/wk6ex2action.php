@@ -1,7 +1,5 @@
-<!-- Sudath Nawagamuwage
-	 CO551-Open Source System
-	 LoogBook 6-->
-	 <!DOCTYPE html>
+<!-- Sudath Nawagamuwage  CO551-Open Source System  LoogBook 6-->
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -16,34 +14,25 @@
 			</header>
 			<div class="content-wrap">
 				<div class="container">	
-<?php	
+					<?php	
+						// Database connection file
+						include 'Dbconnection.php';	  
 
-    // Database connection file
-    include 'Dbconnection.php';	  
+						// Prepare query and execute it
+						$sql = "SELECT * FROM test WHERE ID = '$_GET[id]'";
+						$result = $mysqli->query($sql);
 
-	// Prepare query and execute it
-    $sql = "SELECT * FROM test WHERE ID = '$_GET[id]'";
-    $result = $mysqli->query($sql);
-
-    // Display the form
-    $row = mysqli_fetch_assoc($result);
-    ?>
-<html>
-<body>
-<form action="wk6ex2save.php?id=<?php echo $_GET['id'] ?>" method="post">
-
-	Name :
-	<input type=text name=txtname value="<?php echo $row['name'] ?>"/>
-	</br></br>
-	Phone number :
-	<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" />
-	</br></br>
-	Email :
-	<input type=text name=txtemail value="<?php echo $row['email'] ?>" />
-	</br></br>
-	<input type=submit name=btnsubmit value="save"/>
-</form>
-</div>
+						// Display the form
+						$row = mysqli_fetch_assoc($result);
+					?>
+					<!-- The form to disoaly the data -->
+					<form action="wk6ex2save.php?id=<?php echo $_GET['id'] ?>" method="post">
+						Name :<input type=text name=txtname value="<?php echo $row['name'] ?>"/></br></br>
+						Phone number :<input type=text name=txttelno value="<?php echo $row['phone_number'] ?>" /></br></br>
+						Email :<input type=text name=txtemail value="<?php echo $row['email'] ?>" /></br></br>
+						<input type=submit name=btnsubmit value="save"/>
+					</form>
+				</div>
 			</div>
 			<!-- footer -->
 			<footer class="footer">
