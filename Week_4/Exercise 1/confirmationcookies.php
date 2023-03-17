@@ -3,7 +3,7 @@
     // Include header.php
     include 'header.php';
 ?>
-<!-- Php coding to print the quntity using cookie-->
+<!-- Php coding to print the quntity using cookies-->
 <?php
    // echo "<h2> Your order qty is $_POST[selqty] </h2></br>";
    echo "<h2> Your order qty is : ". $_COOKIE['qtyNumber'] ."</h2></br>";
