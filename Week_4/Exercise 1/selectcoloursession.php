@@ -1,6 +1,8 @@
-<html>
-  <head><title>Select colour page</title></head>
-    <body>
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
       <?php session_start();?>
         <form action="confirmationsession.php"  method="post">
        	Select the colour for the 
@@ -18,5 +20,7 @@
         <br/><br/>	
         <input type="submit" value="Buy"/>
       </form>
-   </body>
-</html>	
+      <?php
+    // Include footer.php
+    include 'footer.php';
+?>
