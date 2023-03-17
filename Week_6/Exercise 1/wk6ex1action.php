@@ -14,6 +14,7 @@
             </header>
             <div class="content-wrap">
                 <div class="container">
+                    <!-- Php coding -->
                     <?php
                          // Database connection file
                         include 'Dbconnection.php';
