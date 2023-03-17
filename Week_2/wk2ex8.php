@@ -3,7 +3,7 @@
     // Include header.php
     include 'header.php';
 ?>
-<!-- Php coding to print my age different way -->
+<!-- Php coding to print moudle details using for loops  -->
 <?php
 $topModules[0] = "Internet Systems Development";
 $topModules[1] = "Programming 1";
