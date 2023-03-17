@@ -1,6 +1,9 @@
-<html>
-  <head><title>Select colour page</title></head>
-    <body>
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
+<!-- Php coding to print moudle details using foreach loops  -->
       <form action="confirmationhidden.php"  method="post">
 	Select the colour for the <input type="hidden" name="hdselqty"
    value="<?= $_POST['selqty'] ?>"/> widgets you are ordering
@@ -14,5 +17,7 @@
         <br/><br/>	
         <input type="submit" value="Buy"/>
       </form>
-   </body>
-</html>	
+<?php
+    // Include footer.php
+    include 'footer.php';
+?>
