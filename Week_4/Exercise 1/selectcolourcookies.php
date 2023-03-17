@@ -1,6 +1,11 @@
-<html>
+<!-- <html>
   <head><title>Select colour page</title></head>
-    <body>
+    <body> -->
+    <?php
+    // Include header.php
+    include 'header.php';
+?>
+<!-- Php coding to print moudle details using foreach loops  -->
       <?php $cookieName ='qtyNumber';
       setcookie($cookieName, $_POST['selqty']);
       ?>
@@ -16,5 +21,7 @@
         <br/><br/>	
         <input type="submit" value="Buy"/>
       </form>
-   </body>
-</html>	
+      <?php
+    // Include footer.php
+    include 'footer.php';
+?>
