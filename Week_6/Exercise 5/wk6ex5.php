@@ -10,7 +10,7 @@
 <body>
 	<div class="page-container">
 		<header>
-			<h1>My PHP Log book page</h1>
+			<h1>My PHP Logbook page EX:6</h1>
 		</header>
 		<div class="content-wrap">
 			<div class="container">
