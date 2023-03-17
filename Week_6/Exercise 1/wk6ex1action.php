@@ -33,10 +33,21 @@
                                               
                         // Execute sql statement
                         $result = $mysqli->query($sql);
+                        // Create the table header
+                        echo '<table border="1">';
+                        echo '<tr><th>Name</th><th>Email</th><th>Phone number</th></tr>';
+
+                        // Loop through the result set and display the data in table rows
                         while ($row = mysqli_fetch_assoc($result))
                         {
-                            echo "$row[name]  $row[email]  $row[phone_number] <br/>";
+                            echo '<tr>';
+                            echo '<td>' . $row['name'] . '</td>';
+                            echo '<td>' . $row['email'] . '</td>';
+                            echo '<td>' . $row['phone_number'] . '</td>';
+                            echo '</tr>';
                         }                    
+
+                        echo '</table>';               
                     ?>
                 </div>
             </div>
