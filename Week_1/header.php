@@ -11,7 +11,7 @@
     <body>
         <div class="page-container">
             <header>
-                <h1><h1>My PHP Logbook page EX:1</h1></h1>
+                <h1><h1>My PHP Logbook Page EX:1</h1></h1>
             </header>
             <div class="content-wrap">
                 <div class="container">
