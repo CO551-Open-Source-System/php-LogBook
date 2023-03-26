@@ -18,6 +18,10 @@ $audio = $_FILES['monsteraudio']['tmp_name'];
 
 //   $result = $mysqli->query($sql);
   $result = mysqli_query($db, $sql);
-
-   mysqli_close($db);
+  if($result){
+    echo "Record updated successfully!";
+}
+// Redirect back to the list page
+header('location: monsterform.html?msg=Record updated successfully');
+//mysqli_close($db);
 ?>
