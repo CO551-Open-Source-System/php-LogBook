@@ -1,6 +1,8 @@
-<html>
-  <head><title>Select colour page</title></head>
-    <body>
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 4-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
       <?php $cookieName ='qtyNumber';
       setcookie($cookieName, $_POST['selqty']);
       ?>
@@ -16,5 +18,7 @@
         <br/><br/>	
         <input type="submit" value="Buy"/>
       </form>
-   </body>
-</html>	
+      <?php
+    // Include footer.php
+    include 'footer.php';
+?>	

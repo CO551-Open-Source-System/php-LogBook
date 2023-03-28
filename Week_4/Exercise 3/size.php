@@ -1,3 +1,8 @@
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 4-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
 <?php
 session_start();
 $_SESSION['qty'] = $_POST['selqty'];
@@ -18,5 +23,7 @@ $_SESSION['qty'] = $_POST['selqty'];
       </select><br><br>
       <input type="submit" value="Buy">
     </form>
-  </body>
-</html>
+    <?php
+    // Include footer.php
+    include 'footer.php';
+?>

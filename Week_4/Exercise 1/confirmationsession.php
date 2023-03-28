@@ -1,9 +1,9 @@
-<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 4-->
 <?php
     // Include header.php
     include 'header.php';
 ?>
-<!-- Php coding to print moudle details using foreach loops  -->
+<!-- Php coding to print the quntitiy using seccion function -->
 <?php
    session_start();
    echo "<h2> Your order qty is :". $_SESSION['qtyNumber']." </h2></br>";

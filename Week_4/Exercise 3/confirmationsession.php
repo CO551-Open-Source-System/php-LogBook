@@ -1,3 +1,8 @@
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 4-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
 <?php
    session_start();
    $size = $_SESSION['size'];
@@ -33,4 +38,8 @@ switch ($size) {
 
    $total_price = $_SESSION['qty'] * $prices[$_SESSION['size']];
    echo "<h2> Total price : £ ".$total_price."</h2>";
+?>
+<?php
+    // Include footer.php
+    include 'footer.php';
 ?>

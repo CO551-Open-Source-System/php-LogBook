@@ -1,3 +1,8 @@
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 4-->
+<?php
+    // Include header.php
+    include 'header.php';
+?>
 <?php
 session_start();
 
@@ -8,14 +13,18 @@ $color = $_SESSION['selcolour'];
 $total = $price * $qty;
 ?>
 
-<html>
+<!-- <html>
 <head>
 	<title>Confirmation Page</title>
 </head>
-<body>
+<body> -->
 	<p>Thank you for your purchase!</p>
 	<p>Qty: <?php echo $qty; ?></p>
 	<p>Colour: <?php echo $color; ?></p>
 	<p>Total Price: <?php echo $total; ?></p>
-</body>
-</html>
+<!-- </body>
+</html> -->
+<?php
+    // Include footer.php
+    include 'footer.php';
+?>
