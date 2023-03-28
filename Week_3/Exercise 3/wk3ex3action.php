@@ -1,4 +1,10 @@
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
 <?php
+    // Include header.php
+    include 'header.php';
+?>
+<?php
+  // Use a switch statement to check the value of the "radcourse" field
   switch ($_POST["radcourse"])
   {
     case "HNC" : echo "You have selected an HNC course";
@@ -11,4 +17,8 @@
                 break;
         default    : echo "No course selected";
   }
+?>
+<?php
+    // Include footer.php
+    include 'footer.php';
 ?>       
