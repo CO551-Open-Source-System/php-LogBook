@@ -5,7 +5,7 @@
 ?>
 <!-- Php coding -->
 <?php
-    // print the current day of the yesr zero day of the year (0 to 365)
+    // print the current day of the year zero day of the year (0 to 365)
     echo "Gmdate :". gmdate ("z")."</br>";
     // print the current day like 17 March 2023
     echo "Date :". date ("j F Y")."</br>";
