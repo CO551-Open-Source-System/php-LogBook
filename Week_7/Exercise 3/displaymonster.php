@@ -21,7 +21,7 @@
                       //Execute the SQL statement 
                       $sql = "select id,name from monster;";
 
-                      // Execute sql statement
+                      //Execute sql statement
                       $result = mysqli_query($conn, $sql);
                       $row = mysqli_fetch_array($result);
 
