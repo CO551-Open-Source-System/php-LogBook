@@ -35,7 +35,8 @@
                         while ($row = mysqli_fetch_assoc($result))
                         {
                             echo "$row[name]  $row[email]  $row[phone_number] <br/>";
-                        }   
+                        }
+                        // Redirect back to the list page  
                         header('location: wk6ex2.php?msg=Record updated successfully')
                     ?>
                 </div>
