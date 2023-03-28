@@ -2,13 +2,13 @@
 
   header("Content-type: image/jpeg");
 
-  // Database connection file
-  // include 'Dbconnection.php';
+  // Database connection file 
   $conn = mysqli_connect("localhost","sudath","test123","db2_monster");
 
-
+  // Define the SQL statement for selecting id to print the image
   $sql = "SELECT image FROM monster WHERE id='" . $_GET['id'] ."';";
 	
+  // Execute sql statement
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
   
