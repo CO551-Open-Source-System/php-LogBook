@@ -5,10 +5,12 @@
 ?>
 <!-- Php coding -->
 <?php
-    // zero day of the year
+    // print the current day of the yesr zero day of the year (0 to 365)
     echo "Gmdate :". gmdate ("z")."</br>";
-    // outputs: 17 March 2023
-    echo "Date :". date ("j F Y");
+    // print the current day like 17 March 2023
+    echo "Date :". date ("j F Y")."</br>";
+    // print the current day of the week 
+    echo "Date :". date ("D");
 ?>
 <?php
     // Include footer.php
