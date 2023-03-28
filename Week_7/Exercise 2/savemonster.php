@@ -23,5 +23,5 @@ $audio = $_FILES['monsteraudio']['tmp_name'];
 }
 // Redirect back to the list page
 header('location: monsterform.html?msg=Record updated successfully');
-//mysqli_close($db);
+mysqli_close($db);
 ?>
