@@ -1,7 +1,11 @@
-<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 6-->
+<!-- Sudath Nawagamuwage CO551-Open Source System LoogBook 8-->
 <?php
     // Include header.php
     include 'header.php';
+?>
+<?php	
+    // Database connection file
+    include 'Dbconnection.php';
 ?>
 <?php
      $lottodate = date("d m Y");
